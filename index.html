@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gandkari Detector</title>
+  <meta name="description" content="Indian roads already have the bumps. Now they have a soundtrack. A satirical Android app that plays a sound effect every time your car hits a bump.">
+  <meta property="og:title" content="Gandkari Detector">
+  <meta property="og:description" content="Indian roads already have the bumps. Now they have a soundtrack. 🇮🇳🚗💥">
+  <meta property="og:image" content="https://gandkari-detector.github.io/og-image.jpg">
+  <meta property="og:url" content="https://gandkari-detector.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.png">
+  <script>
+    // PostHog, cookieless (memory persistence). Placeholders are filled in by CI; left as-is, nothing loads.
+    (function () {
+      var key = "phc_pqhvN3zqh6bwQKZYLep7AJvegGesqZcG6ucWRaeBNGGu", host = "https://us.i.posthog.com";
+      if (key.indexOf("__") === 0) return;
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister identify reset get_distinct_id set_config opt_in_capturing opt_out_capturing has_opted_out_capturing".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init(key, { api_host: host, persistence: "memory", person_profiles: "identified_only" });
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #F4F5F7; --surface: #FFFFFF; --text: #1A1C1E; --muted: #5F6368;
+      --accent: #16A34A; --on-accent: #FFFFFF; --border: #E3E5E8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121417; --surface: #1E2125; --text: #E8EAED; --muted: #9AA0A6;
+        --accent: #22C55E; --on-accent: #04210F; --border: #2A2E33;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+    .hero { text-align: center; }
+    .hero-image { width: 384px; max-width: 100%; height: auto; border-radius: 24px; background: #fff; }
+    h1 { font-size: 2.4rem; margin: 16px 0 4px; line-height: 1.2; }
+    .tagline { font-size: 1.15rem; font-weight: 600; color: var(--muted); margin: 0 0 28px; }
+    .download {
+      display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px;
+      background: var(--accent); color: var(--on-accent); text-decoration: none;
+      font-weight: 700; font-size: 1.1rem; border-radius: 999px;
+    }
+    .download:hover { filter: brightness(1.08); }
+    .note { color: var(--muted); font-size: 0.85rem; margin-top: 10px; }
+    section {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 24px; margin-top: 24px;
+    }
+    h2 { margin: 0 0 12px; font-size: 1.3rem; color: var(--accent); }
+    ul, ol { margin: 0; padding-left: 1.2em; }
+    li { margin: 6px 0; }
+    .quote { font-size: 1.1rem; font-weight: 600; }
+    .scale { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 0.95rem; }
+    .scale th, .scale td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); }
+    .scale th { color: var(--muted); font-weight: 600; }
+    footer { text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: 40px; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <img class="hero-image" src="og-image.jpg" width="384" height="384" alt="Gandkari Detector caricature: Shugar Daddy">
+    <h1>🇮🇳 Gandkari Detector</h1>
+    <p class="tagline">Your car has suspension. Your phone has sensors.<br>India's roads have other plans.</p>
+    <a class="download" href="gandkari-detector.apk" download onclick="window.posthog && posthog.capture('apk_download_clicked')">⬇&nbsp; Download for Android</a>
+    <p class="note">Free · Android 8.0+ · about 3 MB</p>
+  </div>
+
+  <section>
+    <p>A satirical driving companion for Android. It feels every bump through your phone's accelerometer and answers with a desi sound effect, played right over your music and through Android Auto.</p>
+    <p>Think of it as a live soundtrack for the Indian driving experience.</p>
+  </section>
+
+  <section>
+    <h2>🚧 Why?</h2>
+    <p>Navigation apps tell us where to go. Music apps tell us what to listen to.</p>
+    <p>But who celebrates the tiny earthquake you just drove over?</p>
+    <p>Gandkari Detector is a playful take on everyday driving on Indian roads, where every trip comes with surprise terrain, bonus speed breakers, and the odd pothole that has its own pin code.</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Coming soon: India's Bump Atlas</h2>
+    <p>Right now every bump gets a sound effect. Next, every bump becomes a data point.</p>
+    <p>With your permission, Gandkari Detector will note <i>where</i> each bump happened. Put enough drives together, let AI separate real potholes from someone dropping their phone, and we get a living map of the country's speed breakers, potholes, and surprise craters: which road, which stretch, and how hard it hits.</p>
+    <table class="scale">
+      <tr><th>Level</th><th>Name</th><th>What it feels like</th></tr>
+      <tr><td>1</td><td>Halka jhatka</td><td>Your chai survives. Barely.</td></tr>
+      <tr><td>2</td><td>Chai spiller</td><td>Your chai does not survive.</td></tr>
+      <tr><td>3</td><td>Spine adjuster</td><td>Free chiropractic session.</td></tr>
+      <tr><td>4</td><td>Suspension ka antim sanskar</td><td>Your mechanic just bought a new car.</td></tr>
+    </table>
+    <ul>
+      <li><b>Opt-in only.</b> Location stays off unless you switch it on, and is only used while a session is running.</li>
+      <li><b>Many drivers, one map.</b> The same spot hit by many cars, at different speeds, on different phones, becomes a confident pin.</li>
+      <li><b>AI does the sorting.</b> It groups nearby bumps, matches them to roads, tells potholes from speed breakers, and rates how bad each one is.</li>
+      <li><b>Roads, not people.</b> Only aggregated road segments are ever shown. No individual trips, no accounts, and the start and end of every drive are trimmed.</li>
+      <li><b>A map everyone can see.</b> Drivers know what's coming, and anyone can see exactly which roads need attention.</li>
+    </ul>
+    <p class="note">Status: in design. Nothing is collected yet.</p>
+  </section>
+
+  <section>
+    <h2>🎵 Features</h2>
+    <ul>
+      <li><b>Bump detection</b>: the accelerometer picks up road impacts. Hard braking and turns get filtered out (mostly).</li>
+      <li><b>Reactive sound effects</b>: desi reaction clips. Pick a favourite or let it randomise across the ones you tick.</li>
+      <li><b>Bring your own chaos</b>: import any clip from your phone, or search for new ones online (experimental).</li>
+      <li><b>Plays nice with your music</b>: Spotify and friends duck for a second instead of pausing.</li>
+      <li><b>Android Auto ready</b>: effects come through the car speakers like a navigation prompt.</li>
+      <li><b>Live bump graph</b>: watch the road's mood swings over the last 30 seconds.</li>
+      <li><b>Tunable outrage</b>: set sensitivity and cooldown so a rough road doesn't turn into a DJ set.</li>
+      <li><b>Private by default</b>: no account, no location, no microphone. Bump detection never leaves your phone; anonymous usage stats help us improve and can be turned off in Settings.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📲 Install</h2>
+    <ol>
+      <li>On your Android phone, tap <b>Download for Android</b> above.</li>
+      <li>Open the downloaded file. If asked, allow your browser to install unknown apps.</li>
+      <li>While <b>parked</b>, open <b>Settings</b> and pick your sensitivity and sounds.</li>
+      <li>Mount the phone securely, tap <b>Start session</b>, and drive normally.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>🛣️ Our philosophy</h2>
+    <p class="quote">We believe every bump deserves to be heard.</p>
+    <p>We're not fixing the roads. We're adding a soundtrack to them. And soon, a map of exactly where to start.</p>
+  </section>
+
+  <section>
+    <h2>⚠️ Disclaimer</h2>
+    <p>This is a satire project made for entertainment. The name and the caricature are parody, and the project is not affiliated with or endorsed by any person, ministry, or government body.</p>
+    <p>Bump detection is approximate. It may trigger on other movements or miss some bumps entirely, much like the potholes themselves.</p>
+    <p><b>Drive safely.</b> Keep your eyes on the road, follow traffic laws, and never touch your phone while driving. Set everything up before you leave, then let the app do its thing in the background. Keep the volume low enough to hear horns, sirens, and the vehicles around you.</p>
+  </section>
+
+  <footer>Built with love, irony, and a healthy respect for suspension systems.</footer>
+</main>
+</body>
+</html>
